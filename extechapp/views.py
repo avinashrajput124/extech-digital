@@ -87,7 +87,7 @@ def main(request):
     if request.method=="POST":
         data=student_register(request.POST)
         id=request.POST['id']
-        first_name=request.POST['first_name']
+        first_name=request.POST['first_name'] 
         last_name=request.POST['last_name']
         fathername=request.POST['fathername']
         starts_on=request.POST['starts_on']
