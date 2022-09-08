@@ -36,6 +36,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['127.0.0.1','extexh-digital.herokuapp.com']
 
 
+
 EMAIL_HOST = 'smtp.mailtrap.io'
 EMAIL_PORT = 2525
 EMAIL_HOST_USER = '7a5e6177295c31'
