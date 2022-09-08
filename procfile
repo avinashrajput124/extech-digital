@@ -1,1 +1,1 @@
-web: gunicorn extechapp.wsgi
+web: gunicorn extechapp:app --log-file -
