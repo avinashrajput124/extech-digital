@@ -10,25 +10,25 @@ from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 
 from django.conf import settings
-import pyrebase
-import firebase_admin
-from firebase_admin import credentials
-from firebase_admin import db
-from firebase_admin import auth
+# import pyrebase
+# import firebase_admin
+# from firebase_admin import credentials
+# from firebase_admin import db
+# from firebase_admin import auth
 
 
 
-firebaseConfig = {
-  "apiKey": "AIzaSyB3oat-wcH0z45mC7wJoXSTV_Qr60GKmv0",
-  "authDomain": "extech-d485a.firebaseapp.com",
-  "databaseURL": "https://extech-d485a-default-rtdb.firebaseio.com",
-  "projectId": "extech-d485a",
-  "storageBucket": "extech-d485a.appspot.com",
-  "messagingSenderId": "254602568072",
+# firebaseConfig = {
+#   "apiKey": "AIzaSyB3oat-wcH0z45mC7wJoXSTV_Qr60GKmv0",
+#   "authDomain": "extech-d485a.firebaseapp.com",
+#   "databaseURL": "https://extech-d485a-default-rtdb.firebaseio.com",
+#   "projectId": "extech-d485a",
+#   "storageBucket": "extech-d485a.appspot.com",
+#   "messagingSenderId": "254602568072",
 
-}
-cred = credentials.Certificate("path/to/serviceAccountKey.json")
-firebase_admin.initialize_app(cred)
+# }
+# cred = credentials.Certificate("path/to/serviceAccountKey.json")
+# firebase_admin.initialize_app(cred)
 
 
 def signup(request):
@@ -55,7 +55,7 @@ def signup(request):
                 
           
             else:
-                user=auth.create_user(email=email,password=password,phone_number=mobile_no)
+                # user=auth.create_user(email=email,password=password,phone_number=mobile_no)
                 data=User.objects.create_user(first_name=first_name,last_name=mobile_no,email=email,username=username,password=password)
                     
                 data.save() 
