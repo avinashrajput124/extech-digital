@@ -35,7 +35,7 @@ SECRET_KEY = 'django-insecure-!jfuu18+$+sgojj$%joy-_zf=8(e!4od8+kiugrk_j*zh2jzcc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['extech-digital.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
 
 
@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'whitenoise.runserver_nostatic',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -68,9 +69,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+WHITENOISE_USE_FINDERS = True
 
 ROOT_URLCONF = 'extech.urls'
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
